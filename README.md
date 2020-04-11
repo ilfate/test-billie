@@ -3,7 +3,14 @@
 A service to calculate Mars Sol Date(MSD) and Martian Coordinated Time(MCT)
 
 ## How to run
+if you have php7.4 on your system run:
 `composer install`
+
+alternative run:
+`docker run --rm --interactive --tty \
+   --volume $PWD:/app \
+   --user $(id -u):$(id -g) \
+   composer install`
 
 `docker-compose up -d`
 
