@@ -20,4 +20,9 @@ open `http://127.0.0.1:8023/?time=1585723803` - to test the result calculation o
 
 Find the API contract in `swagger.yaml` file
 
+## Tests
+if you have php 7.4
 run `php vendor/phpunit/phpunit/phpunit test` for tests
+
+or run tests on Docker:
+`docker-compose exec php cd /code; php vendor/phpunit/phpunit/phpunit test`
