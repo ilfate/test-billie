@@ -3,7 +3,7 @@ info:
   version: "1"
   title: "MarsTime"
 schemes:
-  - "https"
+  - "http"
 paths:
   /:
     get:
