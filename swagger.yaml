@@ -1,0 +1,38 @@
+swagger: "2.0"
+info:
+  version: "1"
+  title: "MarsTime"
+schemes:
+  - "https"
+paths:
+  /:
+    get:
+      summary: "endpoint to get Mars time based on Earth's UTC time"
+      parameters:
+        - in: "query"
+          name: "time"
+          type: string
+          format: timestamp
+          description: "Earth's UTC timestamp to be converted to Mars time. By default ueses current time."
+      responses:
+        200:
+          description: "Convertion was successful."
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: "response status"
+                example: "Ok"
+              MSD:
+                type: string
+                description: "MSD - Mars Sol Date represented in Julian Date format"
+                example: "51989.525547204"
+              MTC:
+                type: string
+                description: "MTC - Martian Coordinated Time formated as Hours:Minutes:seconds"
+                example: "12:36:47"
+        400:
+          description: "Bad request"
+        500:
+          description: "Internal error"
